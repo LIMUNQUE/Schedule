@@ -1,0 +1,121 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgmqhx3hv2rw7"]
+
+[ext_resource type="PackedScene" uid="uid://b2s8v4l3q5wk5" path="res://Columns.tscn" id="1_hpg30"]
+[ext_resource type="Script" path="res://Scripts/hub.gd" id="1_hsju6"]
+
+[node name="HUB" type="CanvasLayer"]
+script = ExtResource("1_hsju6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.262745, 1, 1, 0.223529)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.0
+offset_top = 20.0
+offset_right = 62.0
+offset_bottom = 46.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Schedule Maker"
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -131.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+scroll_deadzone = 10
+
+[node name="Weeks" type="GridContainer" parent="Scroll"]
+layout_mode = 2
+columns = 6
+
+[node name="Hora" type="GridContainer" parent="Scroll/Weeks"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Scroll/Weeks/Hora"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "Hora"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Columm" parent="Scroll/Weeks" instance=ExtResource("1_hpg30")]
+layout_mode = 2
+
+[node name="Columm2" parent="Scroll/Weeks" instance=ExtResource("1_hpg30")]
+layout_mode = 2
+
+[node name="Columm3" parent="Scroll/Weeks" instance=ExtResource("1_hpg30")]
+layout_mode = 2
+
+[node name="Columm4" parent="Scroll/Weeks" instance=ExtResource("1_hpg30")]
+layout_mode = 2
+
+[node name="Columm5" parent="Scroll/Weeks" instance=ExtResource("1_hpg30")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = -109.0
+offset_top = 132.0
+offset_right = 1109.0
+offset_bottom = 189.0
+theme_override_constants/separation = 104
+alignment = 1
+
+[node name="Label6" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Hora"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Lunes" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.819608, 0.803922, 0.345098)
+theme_override_font_sizes/font_size = 24
+text = "Lunes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.819608, 0.803922, 0.345098)
+theme_override_font_sizes/font_size = 24
+text = "Martes"
+
+[node name="Label3" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.819608, 0.803922, 0.345098)
+theme_override_font_sizes/font_size = 24
+text = "Miercoles"
+vertical_alignment = 3
+
+[node name="Label4" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.819608, 0.803922, 0.345098)
+theme_override_font_sizes/font_size = 24
+text = "Jueves"
+vertical_alignment = 3
+
+[node name="Label5" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.819608, 0.803922, 0.345098)
+theme_override_font_sizes/font_size = 24
+text = "Viernes"
+vertical_alignment = 3

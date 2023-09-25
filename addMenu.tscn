@@ -1,0 +1,131 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt2gw1crlb22x"]
+
+[ext_resource type="Script" path="res://Scripts/addMenu.gd" id="1_k4fiu"]
+[ext_resource type="PackedScene" uid="uid://t8j0d8pfopu7" path="res://container.tscn" id="2_6xuio"]
+
+[node name="addMenu" type="ColorRect"]
+custom_minimum_size = Vector2(613, 413)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -539.0
+offset_bottom = -235.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.415686, 0.74902, 1, 1)
+script = ExtResource("1_k4fiu")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_right = 45.0
+offset_bottom = 37.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Materia"
+
+[node name="btnAtras" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Atras"
+
+[node name="Nombre" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.5
+offset_top = -94.5
+offset_right = -162.5
+offset_bottom = -63.5
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Nombre"
+
+[node name="Crear" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -111.0
+offset_top = -308.0
+offset_right = -62.0
+offset_bottom = -277.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Crear"
+
+[node name="btnIngresar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -24.5
+offset_top = -31.0
+offset_right = 24.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Ingresar
+"
+
+[node name="btnLimpiar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -257.0
+offset_top = -33.0
+offset_right = -189.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Limpiar"
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.5
+offset_top = -97.5
+offset_right = 110.5
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" parent="VBox" groups=["grupo1"] instance=ExtResource("2_6xuio")]
+layout_mode = 2
+
+[node name="Container2" parent="VBox" groups=["grupo1"] instance=ExtResource("2_6xuio")]
+layout_mode = 2
+
+[node name="Container3" parent="VBox" groups=["grupo1"] instance=ExtResource("2_6xuio")]
+layout_mode = 2
+
+[connection signal="pressed" from="btnAtras" to="." method="_on_btn_atras_pressed"]
+[connection signal="pressed" from="btnIngresar" to="." method="_on_btn_ingresar_pressed"]
+[connection signal="pressed" from="btnLimpiar" to="." method="_on_btn_limpiar_pressed"]

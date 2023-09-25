@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://t8j0d8pfopu7"]
+
+[ext_resource type="Script" path="res://Scripts/Container.gd" id="1_wl8g6"]
+
+[node name="Container" type="HBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.5
+offset_top = -101.5
+offset_right = 108.5
+offset_bottom = -60.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wl8g6")
+
+[node name="MenuButton" type="MenuButton" parent="."]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+text = "Dia"
+flat = false
+clip_text = true
+switch_on_hover = true
+item_count = 5
+popup/item_0/text = "Lunes"
+popup/item_0/checkable = 2
+popup/item_0/id = 0
+popup/item_1/text = "Martes"
+popup/item_1/checkable = 2
+popup/item_1/id = 1
+popup/item_2/text = "Miercoles"
+popup/item_2/checkable = 2
+popup/item_2/id = 2
+popup/item_3/text = "Jueves"
+popup/item_3/checkable = 2
+popup/item_3/id = 3
+popup/item_4/text = "Viernes"
+popup/item_4/checkable = 2
+popup/item_4/id = 4
+
+[node name="horaIn" type="LineEdit" parent="."]
+layout_mode = 2
+placeholder_text = "hora input"
+
+[node name="horaOut" type="LineEdit" parent="."]
+layout_mode = 2
+placeholder_text = "hora out"
